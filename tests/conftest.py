@@ -117,7 +117,11 @@ def dev_server(xprocess, request, tmp_path):
             # Extend the existing env, otherwise Windows and CI fails.
             # Modules will be imported from tmp_path for the reloader.
             # Unbuffered output so the logs update immediately.
-            env = {**os.environ, "PYTHONPATH": str(tmp_path), "PYTHONUNBUFFERED": "1"}
+            env = {
+                **os.environ,
+                "PYTHONPATH": str(tmp_path) + ":".join(sys.path),
+                "PYTHONUNBUFFERED": "1",
+            }
 
             @cached_property
             def pattern(self):
