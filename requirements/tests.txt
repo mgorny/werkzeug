@@ -21,20 +21,22 @@ pluggy==0.13.1
 psutil==5.8.0
     # via pytest-xprocess
 py==1.10.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-xprocess
 pycparser==2.20
     # via cffi
 pyparsing==2.4.7
     # via packaging
-pytest-timeout==1.4.2
-    # via -r requirements/tests.in
-pytest-xprocess==0.17.1
-    # via -r requirements/tests.in
 pytest==6.2.4
     # via
     #   -r requirements/tests.in
     #   pytest-timeout
     #   pytest-xprocess
+pytest-timeout==1.4.2
+    # via -r requirements/tests.in
+pytest-xprocess==0.21.0
+    # via -r requirements/tests.in
 toml==0.10.2
     # via pytest
 watchdog==2.1.1
